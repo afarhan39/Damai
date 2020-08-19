@@ -9,5 +9,61 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="android:windowActionBarOverlay">true</item>
+        <item name="fontFamily">@font/lato</item>
+    </style>
+
+    <style name="Heading1">
+        <item name="android:textSize">40sp</item>
+        <item name="android:fontFamily">@font/lato_medium</item>
+    </style>
+
+    <style name="Heading2">
+        <item name="android:textSize">32sp</item>
+        <item name="android:fontFamily">@font/lato_medium</item>
+    </style>
+
+    <style name="Title">
+        <item name="android:textSize">24sp</item>
+        <item name="android:fontFamily">@font/lato_medium</item>
+    </style>
+
+    <style name="ButtonText">
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">@font/lato</item>
+    </style>
+
+    <style name="BodyBig">
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">@font/lato_medium</item>
+    </style>
+
+    <style name="Body1">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/lato_medium</item>
+    </style>
+
+    <style name="Body2">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/lato</item>
+    </style>
+
+    <style name="BodyMid1">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/lato_bold</item>
+    </style>
+
+    <style name="BodyMid2">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/lato_medium</item>
+    </style>
+
+    <style name="BodyMid3">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/lato</item>
+    </style>
+
+    <style name="BodySmall">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/lato_medium</item>
     </style>
 </resources>
