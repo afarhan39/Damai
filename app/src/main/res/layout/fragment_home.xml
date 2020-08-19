@@ -4,25 +4,429 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16dp"
     tools:context=".ui.HomeFragment">
 
-    <TextView
-        android:id="@+id/textview_first"
-        style="@style/Heading2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@id/button_first"
-        app:layout_constraintEnd_toEndOf="parent"
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glV1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.20" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glV2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.40" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glV3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.60" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glV4"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.80" />
+
+    <ImageView
+        android:id="@+id/ivHome"
+        android:layout_width="26dp"
+        android:layout_height="39dp"
+        android:src="@drawable/logo_mini"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button_first"
-        style="@style/ButtonText"
+    <TextView
+        style="@style/Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="24dp"
+        android:text="@string/home"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/ivHome"
+        app:layout_constraintStart_toEndOf="@id/ivHome"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/ivSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:padding="10dp"
+        android:src="@drawable/ic_settings"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/ivDonate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:background="?attr/selectableItemBackground"
+        android:padding="10dp"
+        android:src="@drawable/ic_donate"
+        app:layout_constraintEnd_toStartOf="@id/ivSettings"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/vTime"
+        android:layout_width="210dp"
+        android:layout_height="111dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/shape_rectangle_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivHome" />
+
+    <TextView
+        android:id="@+id/tvDateHijri"
+        style="@style/Body1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/dateHijri"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@id/vTime"
+        app:layout_constraintTop_toTopOf="@id/vTime" />
+
+    <TextView
+        android:id="@+id/tvDateGregorian"
+        style="@style/BodySmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/dateGregorian"
+        android:textColor="@color/white70"
+        app:layout_constraintStart_toStartOf="@id/vTime"
+        app:layout_constraintTop_toBottomOf="@id/tvDateHijri" />
+
+    <TextView
+        android:id="@+id/tvTime"
+        style="@style/Heading2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/time"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@id/vTime"
+        app:layout_constraintTop_toBottomOf="@id/tvDateGregorian" />
+
+    <TextView
+        android:id="@+id/tvCurrentWaktu"
+        style="@style/BodyMid1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/currentWaktu"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@id/vTime"
+        app:layout_constraintTop_toBottomOf="@id/tvTime" />
+
+    <TextView
+        android:id="@+id/tvCurrentLocation"
+        style="@style/Body1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/currentLocation"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/vTime" />
+
+    <ImageView
+        android:id="@+id/ivCurrentLocation"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/ic_map"
+        app:layout_constraintBottom_toBottomOf="@id/tvCurrentLocation"
+        app:layout_constraintEnd_toStartOf="@id/tvCurrentLocation"
+        app:layout_constraintTop_toTopOf="@id/tvCurrentLocation" />
+
+    <TextView
+        android:id="@+id/tvCurrentTemp"
+        style="@style/Heading2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="18dp"
+        android:text="@string/currentTemp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@id/ivCurrentWeather"
+        app:layout_constraintTop_toTopOf="@id/ivCurrentWeather" />
+
+    <ImageView
+        android:id="@+id/ivCurrentWeather"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="22dp"
+        android:src="@drawable/ic_thunderstorm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvCurrentLocation" />
+
+    <TextView
+        android:id="@+id/tvCurrentWeather"
+        style="@style/BodyMid2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/currentWeather"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivCurrentWeather" />
+
+    <View
+        android:id="@+id/vWaktuSolat"
+        android:layout_width="0dp"
+        android:layout_height="109dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/shape_rectangle_1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textview_first" />
+        app:layout_constraintTop_toBottomOf="@id/vTime" />
+
+    <TextView
+        android:id="@+id/tvWaktuSubuh"
+        style="@style/Body1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:text="@string/waktuSubuh"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@id/glV1"
+        app:layout_constraintStart_toStartOf="@id/vWaktuSolat"
+        app:layout_constraintTop_toTopOf="@id/vWaktuSolat" />
+
+    <TextView
+        android:id="@+id/tvSubuh"
+        style="@style/BodyMid2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/subuh"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@id/glV1"
+        app:layout_constraintStart_toStartOf="@id/vWaktuSolat"
+        app:layout_constraintTop_toBottomOf="@id/tvWaktuSubuh" />
+
+    <ImageView
+        android:id="@+id/ivSubuhState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_missed"
+        app:layout_constraintEnd_toStartOf="@id/glV1"
+        app:layout_constraintStart_toStartOf="@id/vWaktuSolat"
+        app:layout_constraintTop_toBottomOf="@id/tvSubuh" />
+
+    <TextView
+        android:id="@+id/tvWaktuZohor"
+        style="@style/Body1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:text="@string/waktuZohor"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@id/glV2"
+        app:layout_constraintStart_toEndOf="@id/glV1"
+        app:layout_constraintTop_toTopOf="@id/vWaktuSolat" />
+
+    <TextView
+        android:id="@+id/tvZohor"
+        style="@style/BodyMid2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/zohor"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@id/glV2"
+        app:layout_constraintStart_toEndOf="@id/glV1"
+        app:layout_constraintTop_toBottomOf="@id/tvWaktuZohor" />
+
+    <ImageView
+        android:id="@+id/ivZohorState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_done"
+        app:layout_constraintEnd_toStartOf="@id/glV2"
+        app:layout_constraintStart_toEndOf="@id/glV1"
+        app:layout_constraintTop_toBottomOf="@id/tvZohor" />
+
+    <TextView
+        android:id="@+id/tvWaktuAsar"
+        style="@style/Body1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:text="@string/waktuAsar"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@id/glV3"
+        app:layout_constraintStart_toEndOf="@id/glV2"
+        app:layout_constraintTop_toTopOf="@id/vWaktuSolat" />
+
+    <TextView
+        android:id="@+id/tvAsar"
+        style="@style/BodyMid2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/asar"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@id/glV3"
+        app:layout_constraintStart_toEndOf="@id/glV2"
+        app:layout_constraintTop_toBottomOf="@id/tvWaktuAsar" />
+
+    <ImageView
+        android:id="@+id/ivAsarState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_done"
+        app:layout_constraintEnd_toStartOf="@id/glV3"
+        app:layout_constraintStart_toEndOf="@id/glV2"
+        app:layout_constraintTop_toBottomOf="@id/tvAsar" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/shape_rectangle_3"
+        app:layout_constraintBottom_toBottomOf="@id/vWaktuSolat"
+        app:layout_constraintEnd_toStartOf="@id/glV4"
+        app:layout_constraintStart_toEndOf="@id/glV3"
+        app:layout_constraintTop_toTopOf="@id/vWaktuSolat" />
+
+    <TextView
+        android:id="@+id/tvWaktuMaghrib"
+        style="@style/Body1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:text="@string/waktuMaghrib"
+        android:textColor="@color/teal"
+        app:layout_constraintEnd_toStartOf="@id/glV4"
+        app:layout_constraintStart_toEndOf="@id/glV3"
+        app:layout_constraintTop_toTopOf="@id/vWaktuSolat" />
+
+    <TextView
+        android:id="@+id/tvMaghrib"
+        style="@style/BodyMid2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/maghrib"
+        android:textColor="@color/teal"
+        app:layout_constraintEnd_toStartOf="@id/glV4"
+        app:layout_constraintStart_toEndOf="@id/glV3"
+        app:layout_constraintTop_toBottomOf="@id/tvWaktuMaghrib" />
+
+    <ImageView
+        android:id="@+id/ivMaghribState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_done"
+        app:layout_constraintEnd_toStartOf="@id/glV4"
+        app:layout_constraintStart_toEndOf="@id/glV3"
+        app:layout_constraintTop_toBottomOf="@id/tvMaghrib" />
+
+    <TextView
+        android:id="@+id/tvWaktuIsyak"
+        style="@style/Body1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:text="@string/waktuIsyak"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/vWaktuSolat"
+        app:layout_constraintStart_toEndOf="@id/glV4"
+        app:layout_constraintTop_toTopOf="@id/vWaktuSolat" />
+
+    <TextView
+        android:id="@+id/tvIsyak"
+        style="@style/BodyMid2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/isyak"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/vWaktuSolat"
+        app:layout_constraintStart_toEndOf="@id/glV4"
+        app:layout_constraintTop_toBottomOf="@id/tvWaktuIsyak" />
+
+    <ImageView
+        android:id="@+id/ivIsyakState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_todo"
+        app:layout_constraintEnd_toEndOf="@id/vWaktuSolat"
+        app:layout_constraintStart_toEndOf="@id/glV4"
+        app:layout_constraintTop_toBottomOf="@id/tvIsyak" />
+
+    <TextView
+        android:id="@+id/tvQadha"
+        style="@style/Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/qadha"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vWaktuSolat" />
+
+    <View
+        android:id="@+id/vQadha"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/shape_rectangle_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvQadha" />
+
+    <TextView
+        android:id="@+id/tvQadhaTitle"
+        style="@style/Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/qadhaTitle"
+        android:textColor="@color/lightGrey"
+        app:layout_constraintEnd_toEndOf="@id/vQadha"
+        app:layout_constraintStart_toStartOf="@id/vQadha"
+        app:layout_constraintTop_toTopOf="@id/vQadha" />
+
+    <TextView
+        android:id="@+id/tvQadhaDesc"
+        style="@style/Body2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/qadhaDesc"
+        android:textColor="@color/lightGrey"
+        app:layout_constraintEnd_toEndOf="@id/vQadha"
+        app:layout_constraintStart_toStartOf="@id/vQadha"
+        app:layout_constraintTop_toBottomOf="@id/tvQadhaTitle" />
+
+    <Button
+        android:id="@+id/bAddQadha"
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
+        android:layout_marginTop="32dp"
+        android:drawableEnd="@drawable/ic_chevron_right"
+        android:text="@string/addQadha"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/vQadha"
+        app:layout_constraintStart_toStartOf="@id/vQadha"
+        app:layout_constraintTop_toBottomOf="@id/tvQadhaDesc" />
 </androidx.constraintlayout.widget.ConstraintLayout>

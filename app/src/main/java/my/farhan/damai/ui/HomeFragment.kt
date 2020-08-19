@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageButton
+import androidx.constraintlayout.utils.widget.ImageFilterButton
 import androidx.navigation.fragment.findNavController
 import my.farhan.damai.R
 
@@ -23,7 +25,7 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
 
-        view.findViewById<Button>(R.id.button_first).setOnClickListener {
+        view.findViewById<ImageButton>(R.id.ivSettings).setOnClickListener {
             findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
         }
     }

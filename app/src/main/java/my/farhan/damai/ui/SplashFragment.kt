@@ -26,7 +26,7 @@ class SplashFragment : Fragment() {
         }, 500)
 
         Handler().postDelayed({
-            findNavController().navigate(R.id.actSplashToOnboard)
+            findNavController().navigate(R.id.actSplashToHome)
         }, 2000)
     }
 }

@@ -6,4 +6,27 @@
     <string name="searchLocation">Search for location</string>
     <string name="useCurrentLocation">Use my Current Location</string>
 
+    <string name="home">Home</string>
+    <string name="dateHijri">18 Zulkaedah 1441</string>
+    <string name="dateGregorian">20 Jul 2020</string>
+    <string name="time">05 : 36 AM</string>
+    <string name="currentWaktu">IMSAK</string>
+    <string name="currentLocation">Kuala Terengganu</string>
+    <string name="currentTemp">32 &#176;C</string>
+    <string name="currentWeather">Thunderstorm</string>
+    <string name="waktuSubuh">05:46</string>
+    <string name="subuh">Subuh</string>
+    <string name="waktuZohor">01:15</string>
+    <string name="zohor">Zohor</string>
+    <string name="waktuAsar">04:40</string>
+    <string name="asar">Asar</string>
+    <string name="waktuMaghrib">07:26</string>
+    <string name="maghrib">Maghrib</string>
+    <string name="waktuIsyak">08:41</string>
+    <string name="isyak">Isyak</string>
+    <string name="qadha">Qadha</string>
+    <string name="qadhaTitle">Miss your solat?</string>
+    <string name="qadhaDesc">Damai let’s you keep track on your qadha easily</string>
+    <string name="addQadha">Add new qadha</string>
+
 </resources>
