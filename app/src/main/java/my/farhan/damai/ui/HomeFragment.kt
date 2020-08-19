@@ -7,16 +7,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageButton
-import androidx.constraintlayout.utils.widget.ImageFilterButton
 import androidx.navigation.fragment.findNavController
 import my.farhan.damai.R
 
 class HomeFragment : Fragment() {
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_home, container, false)
     }
@@ -25,8 +21,20 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
 
-        view.findViewById<ImageButton>(R.id.ivSettings).setOnClickListener {
-            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
+        view.findViewById<ImageButton>(R.id.ibSettings).setOnClickListener {
+            findNavController().navigate(R.id.actHomeToSettings)
+        }
+
+        view.findViewById<View>(R.id.vWaktuSolat).setOnClickListener {
+            findNavController().navigate(R.id.actHomeToPrayerTime)
+        }
+
+        view.findViewById<View>(R.id.vWeather).setOnClickListener {
+            findNavController().navigate(R.id.actHomeToWeather)
+        }
+
+        view.findViewById<Button>(R.id.bAddQadha).setOnClickListener {
+            findNavController().navigate(R.id.actHomeToQadhaList)
         }
     }
 }

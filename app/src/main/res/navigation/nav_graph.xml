@@ -29,8 +29,11 @@
         tools:layout="@layout/fragment_onboarding">
 
         <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/HomeFragment" />
+            android:id="@+id/actOnboardToHome"
+            app:destination="@id/HomeFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/OnboardingFragment"
+            app:popUpToInclusive="true"/>
     </fragment>
 
     <fragment
@@ -39,9 +42,66 @@
         tools:layout="@layout/fragment_home">
 
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/OnboardingFragment" />
+            android:id="@+id/actHomeToPrayerTime"
+            app:destination="@id/PrayerTimeFragment" />
+
+        <action
+            android:id="@+id/actHomeToQadhaList"
+            app:destination="@id/QadhaListFragment" />
+
+        <action
+            android:id="@+id/actHomeToSettings"
+            app:destination="@id/SettingsFragment" />
+
+        <action
+            android:id="@+id/actHomeToWeather"
+            app:destination="@id/WeatherFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/PrayerTimeFragment"
+        android:name="my.farhan.damai.ui.PrayerTimeFragment"
+        tools:layout="@layout/fragment_prayer_time">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/QadhaListFragment"
+        android:name="my.farhan.damai.ui.QadhaListFragment"
+        tools:layout="@layout/fragment_qadha_list">
+        <action
+            android:id="@+id/actQadhaListToSolatInsight"
+            app:destination="@id/SolatInsightFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/SolatInsightFragment"
+        android:name="my.farhan.damai.ui.SolatInsightFragment"
+        tools:layout="@layout/fragment_solat_insight">
+    </fragment>
+
+    <fragment
+        android:id="@+id/SettingsFragment"
+        android:name="my.farhan.damai.ui.SettingsFragment"
+        tools:layout="@layout/fragment_settings">
+
     </fragment>
 
 
+
+    <fragment
+        android:id="@+id/WeatherFragment"
+        android:name="my.farhan.damai.ui.WeatherFragment"
+        tools:layout="@layout/fragment_weather">
+        <action
+            android:id="@+id/actWeatherToWeatherDetail"
+            app:destination="@id/WeatherDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/WeatherDetailFragment"
+        android:name="my.farhan.damai.ui.WeatherDetailFragment"
+        tools:layout="@layout/fragment_weather_detail">
+
+    </fragment>
 </navigation>

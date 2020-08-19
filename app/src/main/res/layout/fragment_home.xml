@@ -55,7 +55,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/ivSettings"
+        android:id="@+id/ibSettings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="?attr/selectableItemBackground"
@@ -72,7 +72,7 @@
         android:background="?attr/selectableItemBackground"
         android:padding="10dp"
         android:src="@drawable/ic_donate"
-        app:layout_constraintEnd_toStartOf="@id/ivSettings"
+        app:layout_constraintEnd_toStartOf="@id/ibSettings"
         app:layout_constraintTop_toTopOf="parent" />
 
     <View
@@ -129,6 +129,15 @@
         android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="@id/vTime"
         app:layout_constraintTop_toBottomOf="@id/tvTime" />
+
+    <View
+        android:id="@+id/vWeather"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvCurrentLocation"
+        app:layout_constraintBottom_toBottomOf="@id/tvCurrentWeather"
+        app:layout_constraintStart_toStartOf="@id/ivCurrentLocation" />
 
     <TextView
         android:id="@+id/tvCurrentLocation"
