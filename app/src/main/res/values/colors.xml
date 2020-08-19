@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="teal">#0DBF9B</color>
+    <color name="tealer">#400DBF9B</color>
     <color name="lightTeal">#EFFBF8</color>
     <color name="darkTeal">#2E3836</color>
     <color name="gold">#FFBB50</color>

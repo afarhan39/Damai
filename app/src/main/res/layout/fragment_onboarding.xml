@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="32dp"
+    tools:context=".ui.OnboardingFragment">
+
+    <TextView
+        android:id="@+id/tvLabel"
+        style="@style/Heading2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="77dp"
+        android:text="@string/setYourLocation"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDesc"
+        style="@style/BodyBig"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/setYourLocationDesc"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvLabel" />
+
+    <View
+        android:id="@+id/vSearch"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="51dp"
+        android:background="@drawable/shape_rectangle_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDesc" />
+
+    <ImageView
+        android:id="@+id/ivSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:src="@drawable/ic_search"
+        app:layout_constraintBottom_toBottomOf="@id/vSearch"
+        app:layout_constraintStart_toStartOf="@id/vSearch"
+        app:layout_constraintTop_toTopOf="@id/vSearch" />
+
+    <EditText
+        android:id="@+id/etSearch"
+        style="@style/Body2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:background="@android:color/transparent"
+        android:hint="@string/searchLocation"
+        android:maxLines="1"
+        android:src="@drawable/ic_search"
+        app:layout_constraintBottom_toBottomOf="@id/vSearch"
+        app:layout_constraintEnd_toEndOf="@id/vSearch"
+        app:layout_constraintStart_toEndOf="@id/ivSearch"
+        app:layout_constraintTop_toTopOf="@id/vSearch" />
+
+    <Button
+        android:id="@+id/bCurrentLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
+        android:layout_marginTop="46dp"
+        android:drawableLeft="@drawable/ic_my_location"
+        android:text="@string/useCurrentLocation"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vSearch" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

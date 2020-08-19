@@ -6,35 +6,42 @@
     app:startDestination="@id/SplashFragment">
 
     <fragment
-        android:id="@+id/FirstFragment"
-        android:name="my.farhan.damai.ui.FirstFragment"
-        android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
-
+        android:id="@+id/SplashFragment"
+        android:name="my.farhan.damai.ui.SplashFragment"
+        tools:layout="@layout/fragment_splash">
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            android:id="@+id/actSplashToOnboard"
+            app:destination="@id/OnboardingFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/SplashFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/actSplashToHome"
+            app:destination="@id/HomeFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/SplashFragment"
+            app:popUpToInclusive="true" />
     </fragment>
+
     <fragment
-        android:id="@+id/SecondFragment"
-        android:name="my.farhan.damai.ui.SecondFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
+        android:id="@+id/OnboardingFragment"
+        android:name="my.farhan.damai.ui.OnboardingFragment"
+        tools:layout="@layout/fragment_onboarding">
 
         <action
             android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            app:destination="@id/HomeFragment" />
     </fragment>
+
     <fragment
-        android:id="@+id/SplashFragment"
-        android:name="my.farhan.damai.ui.SplashFragment"
-        android:label="fragment_splash"
-        tools:layout="@layout/fragment_splash" >
+        android:id="@+id/HomeFragment"
+        android:name="my.farhan.damai.ui.HomeFragment"
+        tools:layout="@layout/fragment_home">
+
         <action
-            android:id="@+id/action_splashFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment"
-            app:launchSingleTop="true"
-            app:popUpTo="@id/SplashFragment"
-            app:popUpToInclusive="true"/>
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/OnboardingFragment" />
     </fragment>
+
+
 </navigation>

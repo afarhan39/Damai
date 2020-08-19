@@ -10,9 +10,6 @@ import androidx.constraintlayout.motion.widget.MotionLayout
 import androidx.navigation.fragment.findNavController
 import my.farhan.damai.R
 
-/**
- * A simple [Fragment] subclass as the default destination in the navigation.
- */
 class SplashFragment : Fragment() {
     private lateinit var motionLayout: MotionLayout
 
@@ -29,7 +26,7 @@ class SplashFragment : Fragment() {
         }, 500)
 
         Handler().postDelayed({
-            findNavController().navigate(R.id.action_splashFragment_to_FirstFragment)
+            findNavController().navigate(R.id.actSplashToOnboard)
         }, 2000)
     }
 }
