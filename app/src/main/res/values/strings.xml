@@ -28,8 +28,6 @@
     <string name="qadhaTitle">Miss your solat?</string>
     <string name="qadhaDesc">Damai let’s you keep track on your qadha easily</string>
     <string name="addQadha">Add new qadha</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <string name="prayerTime">Prayer Time</string>
     <string name="settings">Settings</string>
