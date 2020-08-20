@@ -1,4 +1,4 @@
-package my.farhan.damai.ui
+package my.farhan.damai.ui.weather
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -10,10 +10,10 @@ import android.widget.ImageButton
 import androidx.navigation.fragment.findNavController
 import my.farhan.damai.R
 
-class PrayerTimeFragment : Fragment() {
+class WeatherFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_prayer_time, container, false)
+        return inflater.inflate(R.layout.fragment_weather, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -21,6 +21,10 @@ class PrayerTimeFragment : Fragment() {
 
         view.findViewById<ImageButton>(R.id.ibBack).setOnClickListener {
             findNavController().popBackStack()
+        }
+
+        view.findViewById<Button>(R.id.bGoToWeatherDetail).setOnClickListener {
+            findNavController().navigate(R.id.actWeatherToWeatherDetail)
         }
     }
 }

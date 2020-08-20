@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/SplashFragment"
-        android:name="my.farhan.damai.ui.SplashFragment"
+        android:name="my.farhan.damai.ui.splash.SplashFragment"
         tools:layout="@layout/fragment_splash">
         <action
             android:id="@+id/actSplashToOnboard"
@@ -25,7 +25,7 @@
 
     <fragment
         android:id="@+id/OnboardingFragment"
-        android:name="my.farhan.damai.ui.OnboardingFragment"
+        android:name="my.farhan.damai.ui.onboarding.OnboardingFragment"
         tools:layout="@layout/fragment_onboarding">
 
         <action
@@ -38,7 +38,7 @@
 
     <fragment
         android:id="@+id/HomeFragment"
-        android:name="my.farhan.damai.ui.HomeFragment"
+        android:name="my.farhan.damai.ui.home.HomeFragment"
         tools:layout="@layout/fragment_home">
 
         <action
@@ -60,14 +60,14 @@
 
     <fragment
         android:id="@+id/PrayerTimeFragment"
-        android:name="my.farhan.damai.ui.PrayerTimeFragment"
+        android:name="my.farhan.damai.ui.prayertime.PrayerTimeFragment"
         tools:layout="@layout/fragment_prayer_time">
 
     </fragment>
 
     <fragment
         android:id="@+id/QadhaListFragment"
-        android:name="my.farhan.damai.ui.QadhaListFragment"
+        android:name="my.farhan.damai.ui.qadhalist.QadhaListFragment"
         tools:layout="@layout/fragment_qadha_list">
         <action
             android:id="@+id/actQadhaListToSolatInsight"
@@ -76,13 +76,13 @@
 
     <fragment
         android:id="@+id/SolatInsightFragment"
-        android:name="my.farhan.damai.ui.SolatInsightFragment"
+        android:name="my.farhan.damai.ui.solatinsight.SolatInsightFragment"
         tools:layout="@layout/fragment_solat_insight">
     </fragment>
 
     <fragment
         android:id="@+id/SettingsFragment"
-        android:name="my.farhan.damai.ui.SettingsFragment"
+        android:name="my.farhan.damai.ui.settings.SettingsFragment"
         tools:layout="@layout/fragment_settings">
 
     </fragment>
@@ -91,7 +91,7 @@
 
     <fragment
         android:id="@+id/WeatherFragment"
-        android:name="my.farhan.damai.ui.WeatherFragment"
+        android:name="my.farhan.damai.ui.weather.WeatherFragment"
         tools:layout="@layout/fragment_weather">
         <action
             android:id="@+id/actWeatherToWeatherDetail"
@@ -100,7 +100,7 @@
 
     <fragment
         android:id="@+id/WeatherDetailFragment"
-        android:name="my.farhan.damai.ui.WeatherDetailFragment"
+        android:name="my.farhan.damai.ui.weather.WeatherDetailFragment"
         tools:layout="@layout/fragment_weather_detail">
 
     </fragment>

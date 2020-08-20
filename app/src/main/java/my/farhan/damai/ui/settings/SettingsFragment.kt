@@ -1,4 +1,4 @@
-package my.farhan.damai.ui
+package my.farhan.damai.ui.settings
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -10,10 +10,10 @@ import android.widget.ImageButton
 import androidx.navigation.fragment.findNavController
 import my.farhan.damai.R
 
-class WeatherDetailFragment : Fragment() {
+class SettingsFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_weather_detail, container, false)
+        return inflater.inflate(R.layout.fragment_settings, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

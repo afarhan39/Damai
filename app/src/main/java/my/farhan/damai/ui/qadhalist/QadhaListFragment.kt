@@ -1,4 +1,4 @@
-package my.farhan.damai.ui
+package my.farhan.damai.ui.qadhalist
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

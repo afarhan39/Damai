@@ -1,4 +1,4 @@
-package my.farhan.damai.ui
+package my.farhan.damai.ui.splash
 
 import android.os.Bundle
 import android.os.Handler
